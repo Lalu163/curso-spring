@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class UserRestController {
 
-    @GetMapping("/details2")
+    @GetMapping("/details")
     public Map <String, Object> details(){
         Map<String, Object> body = new HashMap<>();
 
