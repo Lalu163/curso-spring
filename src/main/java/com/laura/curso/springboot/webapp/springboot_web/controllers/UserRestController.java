@@ -1,6 +1,8 @@
 package com.laura.curso.springboot.webapp.springboot_web.controllers;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,20 @@ public class UserRestController {
         userDto.setTitle("Hola Mundo Spring Boot");
         
         return userDto;
+    }
+
+    @GetMapping("/list")
+    public List<User> list(){
+        User user = new User("Laura", "Contreras");
+        User user2 = new User("Anna", "Fernandez");
+        User user3 = new User("Alba", "Pozo");
+
+        List<User> users = new ArrayList<>();
+        users.add(user);
+        users.add(user2);
+        users.add(user3);
+
+        return users;
     }
 
     @GetMapping("/details-map")
