@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.laura.curso.springboot.webapp.springboot_web.models.User;
 import com.laura.curso.springboot.webapp.springboot_web.models.dto.UserDto;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/api")
@@ -39,6 +41,7 @@ public class UserRestController {
         users.add(user3);
 
         return users;
+
     }
 
     @GetMapping("/details-map")
