@@ -30,6 +30,7 @@ public class UserController {
         List<User> users = new ArrayList<>();
 
         model.addAttribute("users", users);
+        model.addAttribute("title", "Listado de usuarios");
         return "list";
     }
     
