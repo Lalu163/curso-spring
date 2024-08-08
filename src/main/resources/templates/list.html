@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1 th:text="${title}"></h1>
-    <div th:if="${users.size() == 0}">No tiene elementos usuarios!</div>
+    <div th:if="${users.size() == 0}" th:text="${'No tiene elementos usuarios!'}"></div>
 </body>
 </html>
