@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.laura.curso.springboot.webapp.springboot_web.models.dto.ParamDto;
+import com.laura.curso.springboot.webapp.springboot_web.models.dto.ParamMixDto;
 
 @RestController
 @RequestMapping("/api/params")
@@ -20,9 +21,9 @@ public class RequestParamsController {
     }
 
     @GetMapping("/bar")
-    public ParamDto bar(@RequestParam String text, @RequestParam Integer code){
+    public ParamMixDto bar(@RequestParam String text, @RequestParam Integer code){
 
-        ParamDto params = new ParamDto();
+        ParamMixDto params = new ParamMixDto();
         params.setMessage(text);
         params.setCode(code);
         return params;
