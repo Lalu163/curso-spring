@@ -37,6 +37,7 @@ public class PathVariableController {
     @PostMapping("/create")
     public User create(@RequestBody User user){
         //hacer algo con el usuario save en la bbdd
+        user.setName(user.getName().toUpperCase());
         return user;
     }
 }
