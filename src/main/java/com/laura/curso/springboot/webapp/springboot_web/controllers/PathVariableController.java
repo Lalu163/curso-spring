@@ -1,5 +1,8 @@
 package com.laura.curso.springboot.webapp.springboot_web.controllers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +19,16 @@ public class PathVariableController {
         ParamDto param = new ParamDto();
         param.setMessage(message);
         return param;
+    }
+
+    @GetMapping("/mix/{product}/{id}")
+    public Map<String, Object> mixPathVar(@PathVariable String product, @PathVariable Long id){
+        
+        Map<String, Object> json = new HashMap<>();
+        json.put("product", product);
+        json.put("id", id);
+        
+        return json;
     }
 
 }
